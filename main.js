@@ -70,3 +70,23 @@ ScrollReveal().reveal(".experience__card", {
     
     interval: 500,
 });
+
+ScrollReveal().reveal(".download__img", {
+    ...scrollRevealOption,
+    origin: "top"
+});
+
+ScrollReveal().reveal(".download__content .section__header", {
+    ...scrollRevealOption,
+    delay: 500
+});
+
+ScrollReveal().reveal(".download__content p", {
+    ...scrollRevealOption,
+    delay: 1000
+});
+
+ScrollReveal().reveal(".download__links", {
+    ...scrollRevealOption,
+    delay: 1500
+});
