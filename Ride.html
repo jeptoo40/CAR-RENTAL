@@ -1,83 +1,106 @@
-f<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ride | Car Rental</title>
-  <link rel="stylesheet" href="ride.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    .car-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .car-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .car-card:hover {
+      transform: scale(1.02);
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .car-card h3 {
+      margin: 15px 0 5px;
+    }
+
+    .car-card p {
+      color: #666;
+      padding: 0 15px;
+    }
+
+    .price {
+      font-weight: bold;
+      margin: 10px 0;
+      color: #1c87c9;
+    }
+
+    button {
+      background-color: #1c87c9;
+      color: white;
+      padding: 10px 20px;
+      margin: 15px 0 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #145a86;
+    }
+
+    .logout {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .logout-btn {
+      color: white;
+      font-weight: bold;
+      background-color: #cc0000;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .logout-btn:hover {
+      background-color: #a30000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <style>
-        body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-}
-
-header {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #333;
-  color: white;
-}
-
-.car-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 30px;
-}
-
-.car-card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.2s;
-}
-
-.car-card:hover {
-  transform: scale(1.02);
-}
-
-.car-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.car-card h3 {
-  margin: 15px 0 5px;
-}
-
-.car-card p {
-  color: #666;
-  padding: 0 15px;
-}
-
-.price {
-  font-weight: bold;
-  margin: 10px 0;
-  color: #1c87c9;
-}
-
-button {
-  background-color: #1c87c9;
-  color: white;
-  padding: 10px 20px;
-  margin: 15px 0 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #145a86;
-}
-
-    </style>
 
   <header>
     <h1>Choose Your Ride</h1>
@@ -86,34 +109,37 @@ button:hover {
 
   <section class="car-list">
     <div class="car-card">
-      <img src="Sedan Deluxe.jpg" alt="Sedan Deluxe">
+      <img src="Sedan Deluxe.jpg" alt="Sedan Deluxe - Comfortable and fuel-efficient car">
       <h3>Sedan Deluxe</h3>
       <p>Comfortable and fuel-efficient. Great for city travel.</p>
       <div class="price">Ksh 5,000/day</div>
-      <button><a href="contact.html">Rent Now</button>
+      <button>Rent Now</button>
     </div>
 
     <div class="car-card">
-      <img src="4x4 SUV Explorer.jpeg" alt="4x4 SUV Explorer">
+      <img src="4x4 SUV Explorer.jpeg" alt="4x4 SUV Explorer - Off-road capable SUV for trips">
       <h3>4x4 SUV Explorer</h3>
       <p>Perfect for off-road and family trips.</p>
       <div class="price">Ksh 8,500/day</div>
-      <button><a href="contact.html">Rent Now</button>
+      <button>Rent Now</button>
     </div>
 
     <div class="car-card">
-      <img src="Luxury Cruiser.jpeg" alt="Luxury Cruiser">
+      <img src="Luxury Cruiser.jpeg" alt="Luxury Cruiser - Premium luxury car for stylish travel">
       <h3>Luxury Cruiser</h3>
       <p>For when comfort and class matter most.</p>
       <div class="price">Ksh 12,000/day</div>
-      <button><a href="contact.html">Rent Now</button>
+      <button>Rent Now</button>
     </div>
   </section>
 
-  <br>
-    <a href="index.html" style="color: white; font-weight: position: center; bold; background-color: #cc0000; padding: 10px 15px; border-radius: 5px; text-decoration: none;">Logout</a>
+  <div class="logout">
+    <a href="index.html" class="logout-btn">Logout</a>
+  </div>
 
-
+  <footer>
+    <p>&copy; 2025 Ride Car Rental. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
