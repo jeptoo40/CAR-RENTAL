@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #0066cc; 
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-info h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #0066cc;
+        }
+
+        .contact-info p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .contact-form h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #0066cc;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #0066cc;
+            color: white;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #005bb5;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 20px;
+            }
+
+            .contact-info h2 {
+                font-size: 1.8em;
+            }
+
+            .contact-info p {
+                font-size: 1em;
+            }
+
+            .contact-form h3 {
+                font-size: 1.5em;
+            }
+
+            .contact-form label {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Contact Us</h1>
+</header>
+
+
+
+<div class="contact-container">
+   
+    <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>We'd love to hear from you! Reach out to us via the form below or contact us directly.</p>
+        <p><i class="fas fa-phone"></i> Call Us: +254724491544</p>
+        <p><i class="fas fa-envelope"></i> Email: jeptookorir56@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Address: 00100 Car Street, Car City</p>
+    </div>
+
+    <div class="contact-form">
+        <h3>BOOK WITH US</h3>
+        <form action="contact.php" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+<div style="text-align: center; margin-bottom: 40px;">
+    <a href="Responded.php" style="text-decoration: none; background-color: #0066cc; color: white; padding: 12px 25px; border-radius: 5px; font-size: 1.1em;">
+        GET FEEDBACK
+    </a>
+   <gap>    </gap>
+        <a href="Rent.html" style="color: white; font-weight: bold; background-color: #cc0000; padding: 10px 15px; border-radius: 5px; text-decoration: none;">Logout</a>
+    </div>
+
+
+</div>
+
+
+<footer>
+    <p>&copy; 2025 Car Rental Services. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -15,23 +15,12 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: #f6f8fa;
+            background: #cc813ba9;
             color: #333;
         }
 
-        header {
-            background: url('https://images.unsplash.com/photo-1606326608695-3e3817ce8f48?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-            height: 60vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        header h1 {
-            font-size: 3rem;
-        }
+        
+        
 
         .section {
             padding: 60px 20px;
@@ -59,10 +48,12 @@
             padding: 30px;
             transition: 0.3s ease;
             text-align: center;
+            position: relative;
         }
 
         .card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         }
 
         .card i {
@@ -82,38 +73,20 @@
             color: #555;
         }
 
+        .cta-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
 
-
-        body {
-    font-family: 'Poppins', sans-serif;
-    background: #121212;
-    color: #f0f0f0;
-}
-.card {
-    background: #1e1e1e;
-    box-shadow: 0 6px 20px rgba(255,255,255,0.05);
-}
-.card p {
-    color: #bbb;
-}
-
-.car {
-    display: inline-block;
-    animation: moveCar 5s linear infinite;
-}
-
-@keyframes moveCar {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(200px); }
-}
-
-
-
-
-
-
-
-
+        .cta-button:hover {
+            background: #0056b3;
+        }
 
         footer {
             background: #007bff;
@@ -123,24 +96,42 @@
             margin-top: 60px;
         }
 
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+        }
+
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2rem;
                 padding: 0 20px;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .card {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
 
-<header>
-  
-    <h1 class="headline">
-        Drive the Difference 
-        <span class="car">🚗</span>
-    </h1>
-    
-</header>
+
 
 <section class="section">
     <h2>Our Services</h2>
@@ -149,37 +140,55 @@
             <i class="fas fa-car-side"></i>
             <h3>Daily Car Rentals</h3>
             <p>Affordable and convenient rentals for your daily needs, from city rides to short trips.</p>
+            <a href="contact.html" class="cta-button">Book Now</a>
         </div>
         <div class="card">
             <i class="fas fa-suitcase-rolling"></i>
             <h3>Airport Transfers</h3>
             <p>On-time and stress-free pickups and drop-offs to all major airports, with luxury options available.</p>
+            <a href="contact.html" class="cta-button">Book Now</a>
         </div>
         <div class="card">
             <i class="fas fa-road"></i>
             <h3>Long-Term Leasing</h3>
             <p>Flexible monthly or yearly leases tailored for corporate clients and frequent travelers.</p>
+            <a href="contact.html" class="cta-button">Learn More</a>
         </div>
         <div class="card">
             <i class="fas fa-crown"></i>
             <h3>Luxury Rentals</h3>
             <p>Choose from our high-end collection of premium vehicles for weddings, events, or business trips.</p>
+            <a href="contact.html" class="cta-button">Book Now</a>
         </div>
         <div class="card">
             <i class="fas fa-user-tie"></i>
             <h3>Chauffeur Services</h3>
             <p>Professional drivers at your service, whether for business, city tours, or private bookings.</p>
+            <a href="contact.html" class="cta-button">Book Now</a>
         </div>
         <div class="card">
             <i class="fas fa-people-carry"></i>
             <h3>Group & Van Rentals</h3>
             <p>Spacious vans and minibuses perfect for family trips, team outings, and travel groups.</p>
+            <a href="contact.html" class="cta-button">Book Now</a>
         </div>
     </div>
 </section>
 
 <footer>
-    <p>Copyright @ 2024 Nouria Designs.All rights reserved.</p>
+    <p>Copyright @ 2024 Nouria Designs. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="#">Facebook</a> |
+        <a href="#">Twitter</a> |
+        <a href="#">Instagram</a> |
+        <a href="contact.html">Contact Us</a>
+    </div>
+<br>
+    <a href="index.html" style="color: white; font-weight: bold; background-color: #cc0000; padding: 10px 15px; border-radius: 5px; text-decoration: none;">Logout</a>
+
+
+
+
 </footer>
 
 </body>

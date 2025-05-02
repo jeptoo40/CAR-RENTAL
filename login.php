@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['username'] = $user['username'];
         echo "Login successful! Welcome, " . $user['fullname'];
         // Optionally, redirect to the dashboard or home page
-        header("Location: dashboard.php");
+        header("Location: index.htnl");
         exit();
     } else {
         // If the credentials don't match, show an error

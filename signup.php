@@ -23,11 +23,23 @@ try {
 // Step 2: Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Step 3: Collect form data and sanitize it
-    $fullname = $_POST['fullname'];
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
+    $fullname = htmlspecialchars($_POST['fullname']);
+    $username = htmlspecialchars($_POST['username']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
     $password = $_POST['password'];
+
+    // Validate email format
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format!";
+        exit();
+    }
+
+    // Validate password strength
+    if (strlen($password) < 8) {
+        echo "Password must be at least 8 characters!";
+        exit();
+    }
 
     // Step 4: Hash the password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -75,13 +87,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
-
-
-
-
-
-
-
-
-
 ?>

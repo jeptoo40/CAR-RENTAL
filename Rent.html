@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Car Rentals</title>
+  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #8d84849a;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #222;
+            color: #fff;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #7d59df;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-image: url('hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        #hero h1 {
+            font-size: 4em;
+            font-weight: 600;
+        }
+
+        #hero p {
+            font-size: 1.5em;
+        }
+
+        .cta-button {
+            background-color: #ff6200;
+            color: white;
+            padding: 12px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e04e00;
+        }
+
+        /* Car Filters */
+        #car-filters {
+            padding: 40px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        #car-filters h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #car-filters {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        
+
+        
+
+        /* Car Listing */
+        #car-listing {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .car-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .car-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+            margin: 10px;
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .car-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .car-card .car-details {
+            padding: 20px;
+        }
+
+        .car-card .book-now {
+            background-color: #ff6200;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .car-card .book-now:hover {
+            background-color: #e04e00;
+        }
+
+        /* Testimonials */
+        #testimonials {
+            background-color: #222;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .testimonial-carousel {
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .testimonial-item {
+            max-width: 300px;
+            font-style: italic;
+        }
+
+        .testimonial-item p {
+            font-size: 1.2em;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff6200;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Reach us out!</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Drive in Style with Our Premium Rentals</h1>
+            <p>Experience luxury and comfort on every journey.</p>
+            <a href="contact.html" class="cta-button">Book Your Ride</a>
+        </div>
+    </section>
+
+    <section id="car-filters">
+        <h2>Choose Your Perfect Car</h2>
+        
+    </section>
+
+    <section id="car-listing">
+        <h2>Our Fleet</h2>
+        <div class="car-cards">
+            <!-- Repeat the following block 9 times (one for each car) -->
+            <!-- Car 1 -->
+            <div class="car-card">
+                <img src="R.jpeg" alt="R.jpeg">
+                <div class="car-details">
+                    <h3>Luxury Model X</h3>
+                    <p>Seats 5 | GPS | Leather Seats | Sunroof</p>
+                    <p><strong>$150/day</strong></p>
+                    <a href="contact.html" class="book-now">Book Now</a>
+                </div>
+            </div>
+            <!-- Car 2 -->
+            <div class="car-card">
+                <img src="spoty sedan.jpg" alt="Sporty Sedan.jpg">
+                <div class="car-details">
+                    <h3>Sporty Sedan</h3>
+                    <p>Seats 4 | Turbo Engine | Leather Seats</p>
+                    <p><strong>$120/day</strong></p>
+                    <a href="contact.html" class="book-now">Book Now</a>
+                </div>
+            </div>
+            <!-- Car 3 -->
+            <div class="car-card">
+                <img src="ELEGANT SUV.jpeg" alt="Elegant SUV">
+                <div class="car-details">
+                    <h3>Elegant SUV</h3>
+                    <p>Seats 7 | All-Wheel Drive | Spacious Interior</p>
+                    <p><strong>$180/day</strong></p>
+                    <a href="contact.html" class="book-now">Book Now</a>
+                </div>
+            </div>
+            <!-- Car 4 -->
+            <div class="car-card">
+                <img src="Sporty Coupe.jpeg" alt="Sporty Coupe.jpeg">
+                <div class="car-details">
+                    <h3>Sporty Coupe</h3>
+                    <p>Seats 2 | V6 Engine | Premium Sound</p>
+                    <p><strong>$140/day</strong></p>
+                    <a href="contact.html" class="book-now">Book Now</a>
+                </div>
+            </div>
+            <!-- Car 5 -->
+            <div class="car-card">
+                <img src="Family Van.jpeg" alt="Family Van.jpeg">
+                <div class="car-details">
+                    <h3>Family Van</h3>
+                    <p>Seats 8 | DVD Player | Spacious Interior</p>
+                    <p><strong>$130/day</strong></p>
+                    <a href="contact.html" class="book-now">Book Now</a>
+                </div>
+            </div>
+            <!-- Car 6 -->
+            <div class="car-card">
+                <img src="Convertible.jpeg" alt="Convertible.jpeg">
+                <div class="car-details">
+                    <h3>Convertible</h3>
+                    <p>Seats 2 | Stylish Design | Smooth Drive</p>
+                    <p><strong>$160/day</strong></p>
+                    <a href="contact.html" class="book-now">Book Now</a>
+                </div>
+            </div>
+            <!-- Car 7 -->
+            <div class="car-card">
+                <img src="Electric Model Y.jpeg" alt="Electric Model Y.jpeg">
+                <div class="car-details">
+                    <h3>Electric Model Y</h3>
+                    <p>Seats 5 | Eco-friendly | Smooth Drive</p>
+                    <p><strong>$170/day</strong></p>
+                    <a href="contact.html" class="book-now">Book Now</a>
+                </div>
+            </div>
+            <!-- Car 8 -->
+            <div class="car-card">
+                <img src="Luxury Sedan.jpeg" alt="Luxury Sedan">
+                <div class="car-details">
+                    <h3>Luxury Sedan</h3>
+                    <p>Seats 4 | Leather Seats | Comfort Driven</p>
+                    <p><strong>$200/day</strong></p>
+                    <a href="contact.html" class="book-now">Book Now</a>
+                </div>
+            </div>
+            <!-- Car 9 -->
+            <div class="car-card">
+                <img src="Luxury SUV.jpeg" alt="Luxury SUV">
+                <div class="car-details">
+                    <h3>Luxury SUV</h3>
+                    <p>Seats 7 | GPS | Spacious Interior</p>
+                    <p><strong>$220/day</strong></p>
+                    <a href="contact.html" class="book-now">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial-item">
+                <p>"An outstanding rental experience. The car was flawless!"</p>
+                <p>- Mark T.</p>
+            </div>
+            <!-- More testimonials here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Classic Car Rentals | <a href="/terms">Terms & Conditions</a> | <a href="/privacy">Privacy Policy</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
